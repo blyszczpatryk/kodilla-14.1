@@ -1,3 +1,18 @@
+var carousel = document.getElementById('carousel-template').innerHTML;
+	
+Mustache.parse(carousel);
+
+var carouselElements = '';
+
+for (var i = 0; i < array.length; i++) {
+	carouselElements += Mustache.render(carousel, array[i]);
+}
+
+var results = document.getElementsByClassName('main-carousel')[0];
+
+results.insertAdjacentHTML('beforeend', carouselElements);
+
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   cellAlign: 'left',

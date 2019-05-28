@@ -12,37 +12,57 @@
 	<button class="restart-button">Reset</button>
 
 	<div class="main-carousel">
-	  	<div class="carousel-cell" id="carousel-cell1" style="background-image: url('https://techspective.net/wp-content/uploads/2015/06/vacation.jpg')">
-	  		<div class="container">
-	  			<p>Lorem ipsum</p>
-	  		</div>
-	  	</div>
-	  	<div class="carousel-cell" id="carousel-cell2" style="background-image: url('https://theculturetrip.com/wp-content/uploads/2015/05/shutterstock_161158934.jpg')">
-	  		<div class="container">
-	  			<p>Lorem ipsum</p>
-	  		</div>
-	  	</div>
-	  	<div class="carousel-cell" id="carousel-cell3" style="background-image: url('https://i.imgur.com/WJcoVhv.jpg')">
-	  		<div class="container">
-	  			<p>Lorem ipsum</p>
-	  		</div>
-	  	</div>
-	  	<div class="carousel-cell" id="carousel-cell4" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZKV-ya7alkC2GhXxZlVkIrhH88oMN7JKV4ceiE1ajCAKDP2sVZQ')">
-	  		<div class="container">
-	  			<p>Lorem ipsum</p>
-	  		</div>
-	  	</div>
-	  	<div class="carousel-cell" id="carousel-cell5" style="background-image: url('https://www.tour4arabs.com/wp-content/uploads/2018/05/Blue-Mosque.jpg')">
-	  		<div class="container">
-	  			<p>Lorem ipsum</p>
-	  		</div>
-	  	</div>
 	</div>
 	<div class="progress-bar"></div>
+
+	<script>
+		var array = [
+			{
+				id: 'carousel-cell1',
+				image: 'https://techspective.net/wp-content/uploads/2015/06/vacation.jpg',
+				title: 'Lorem ipsum',
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			},
+			{
+				id: 'carousel-cell2',
+				image: 'https://theculturetrip.com/wp-content/uploads/2015/05/shutterstock_161158934.jpg',
+				title: 'Lorem ipsum',
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			},
+			{
+				id: 'carousel-cell3',
+				image: 'https://i.imgur.com/WJcoVhv.jpg',
+				title: 'Lorem ipsum',
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			},
+			{
+				id: 'carousel-cell4',
+				image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZKV-ya7alkC2GhXxZlVkIrhH88oMN7JKV4ceiE1ajCAKDP2sVZQ',
+				title: 'Lorem ipsum',
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			},
+			{
+				id: 'carousel-cell5',
+				image: 'https://www.tour4arabs.com/wp-content/uploads/2018/05/Blue-Mosque.jpg',
+				title: 'Lorem ipsum',
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			}
+		];
+	</script>
+
+	<script id="carousel-template" type="x-tmpl-mustache">
+		<div class="carousel-cell" id="{{id}}" style="background-image: url('{{image}}')">
+	  		<div class="container">
+	  			<h1>{{title}}</h1>
+	  				{{{description}}}
+	  		</div>
+	  	</div>
+	</script>
 
 
 <script src="./vendor/flickity.pkgd.min.js"></script>
 <script src="./vendor/hash.js"></script>
+<script src="./vendor/mustache.js"></script>
 <script src="./js/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,8 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
 .restart-button {
 	position: absolute;
 	top: 20px;
@@ -15,13 +20,12 @@
 	.carousel-cell {
 		background-size: cover;
 		width: 100%;
-		height: 50vh;
+		min-height: 50vh;
 		.container {
 			max-width: 1000px;
 			margin: 0 auto;
 			text-align: center;
 			color: white;
-			font-size: 50px;
 		}
 	}
 }
