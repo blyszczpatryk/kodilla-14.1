@@ -9,3 +9,5 @@
 .main-carousel .carousel-cell .container { max-width: 1000px; margin: 0 auto; text-align: center; color: white; }
 
 .progress-bar { height: 20px; width: 0; background: #333; }
+
+.map { height: 50vh; width: 100%; }

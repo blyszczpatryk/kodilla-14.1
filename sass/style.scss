@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 }
-
 .restart-button {
 	position: absolute;
 	top: 20px;
@@ -12,9 +11,7 @@
 	background-color: grey;
 	z-index: 9999;
 	color: #fff;
-
 }
-
 .main-carousel {
 	width: 100%;
 	.carousel-cell {
@@ -33,4 +30,8 @@
   height: 20px;
   width: 0;
   background: #333;
+}
+.map {
+	height: 50vh;
+	width: 100%;
 }

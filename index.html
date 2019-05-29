@@ -14,6 +14,7 @@
 	<div class="main-carousel">
 	</div>
 	<div class="progress-bar"></div>
+	<div class="map" id="map"></div>
 
 	<script>
 		var items = [
@@ -21,31 +22,36 @@
 				id: 'carousel-cell1',
 				image: 'https://techspective.net/wp-content/uploads/2015/06/vacation.jpg',
 				title: 'Lorem ipsum',
-				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+				coords: {lat: -25.363, lng: 131.044}
 			},
 			{
 				id: 'carousel-cell2',
 				image: 'https://theculturetrip.com/wp-content/uploads/2015/05/shutterstock_161158934.jpg',
 				title: 'Lorem ipsum',
-				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+				coords: {lat: -25.363, lng: 134.044}
 			},
 			{
 				id: 'carousel-cell3',
 				image: 'https://i.imgur.com/WJcoVhv.jpg',
 				title: 'Lorem ipsum',
-				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+				coords: {lat: -25.363, lng: 137.044}
 			},
 			{
 				id: 'carousel-cell4',
 				image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZKV-ya7alkC2GhXxZlVkIrhH88oMN7JKV4ceiE1ajCAKDP2sVZQ',
 				title: 'Lorem ipsum',
-				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+				coords: {lat: -25.363, lng: 140.044}
 			},
 			{
 				id: 'carousel-cell5',
 				image: 'https://www.tour4arabs.com/wp-content/uploads/2018/05/Blue-Mosque.jpg',
 				title: 'Lorem ipsum',
-				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+				description: '<p>Lorem ipsum.</p> <img src="https://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+				coords: {lat: -25.363, lng: 143.044}
 			}
 		];
 	</script>
@@ -64,5 +70,6 @@
 <script src="./vendor/hash.js"></script>
 <script src="./vendor/mustache.js"></script>
 <script src="./js/script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR3WePFM0RgcKyaIryxO-n9zM4FwoPBZY&callback=initMap"></script>
 </body>
 </html>
