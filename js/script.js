@@ -4,8 +4,8 @@ Mustache.parse(carousel);
 
 var carouselElements = '';
 
-for (var i = 0; i < array.length; i++) {
-	carouselElements += Mustache.render(carousel, array[i]);
+for (var i = 0; i < items.length; i++) {
+	carouselElements += Mustache.render(carousel, items[i]);
 }
 
 var results = document.getElementsByClassName('main-carousel')[0];
