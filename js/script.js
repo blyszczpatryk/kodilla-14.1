@@ -6,7 +6,7 @@ var carouselElements = '';
 
 for (var i = 0; i < items.length; i++) {
 	carouselElements += Mustache.render(carousel, items[i]);
-}
+};
 
 var results = document.getElementsByClassName('main-carousel')[0];
 
@@ -21,11 +21,11 @@ var flkty = new Flickity( elem, {
   hash: true,
 });
 
-var button = document.querySelector('.restart-button');
+var restartButton = document.querySelector('.restart-button');
 
-button.addEventListener('click', function() {
+restartButton.addEventListener('click', function() {
 	flkty.select(0);
-})
+});
 
 var progressBar = document.querySelector('.progress-bar')
 
@@ -42,9 +42,19 @@ window.initMap = function() {
   	var map = new google.maps.Map(
     	document.getElementById('map'), {zoom: 4, center: uluru});
 
+  	var markers = [];
 
-  	items.forEach(function(carousel) {
-  		new google.maps.Marker({position: carousel.coords, map: map})
+  	items.forEach(function(carousel, index) {
+
+  		markers.push(new google.maps.Marker({position: carousel.coords, map: map}));
+
+  		markers[index].addListener('click', function() {
+  			flkty.select(index);
+  		});
   	});
-	
-}
+
+  	flkty.on('change', function(index) {
+  		map.setCenter(items[index].coords);
+  	});
+};
+
